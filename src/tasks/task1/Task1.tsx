@@ -56,9 +56,9 @@ const Task1: React.FC = () => {
         {error && <p className="text-red-500">{error}</p>}
         {fileContent && (
           <div className="my-4 pb-1 overflow-auto">
-            <h2 className="text-lg font-bold sticky left-0">File content:</h2>
+            <h2 className="text-xl font-bold sticky left-0">File content:</h2>
             <pre>{fileContent}</pre>
-            <h2 className="text-lg font-bold sticky left-0 mt-2">
+            <h2 className="text-xl font-bold sticky left-0 mt-2">
               Encrypted content:
             </h2>
             <pre>{encryptText(fileContent)}</pre>
