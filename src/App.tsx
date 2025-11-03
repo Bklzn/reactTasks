@@ -1,12 +1,12 @@
 import "./App.css";
 import Task1 from "./tasks/task1/Task1";
+import Task2 from "./tasks/task2/Task2";
 
 function App() {
   return (
-    <div className="w-full h-screen flex items-center justify-center p-10">
-      <div className="max-w-full border-2 border-gray-500 p-4 rounded-lg text-white">
-        <Task1 />
-      </div>
+    <div className="w-full h-screen flex flex-col gap-2 items-center justify-center p-10">
+      <Task1 />
+      <Task2 />
     </div>
   );
 }

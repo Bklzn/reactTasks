@@ -39,31 +39,33 @@ const Task1: React.FC = () => {
     });
   };
   return (
-    <form>
-      <h1 className="text-2xl font-bold">Task 1</h1>
-      <label className="block mb-2 text-sm font-medium" htmlFor="file_input">
-        Upload file
-      </label>
-      <input
-        className="block border border-gray-300 rounded px-2 ps-0 background-white file:mr-4 file:py-2 file:px-4 file:border-0 file:font-semibold file:bg-gray-50 file:text-gray-700 hover:file:bg-gray-300"
-        id="file_input"
-        type="file"
-        accept="text/plain"
-        onChange={handleFileChange}
-        key={new Date().getTime()}
-      />
-      {error && <p className="text-red-500">{error}</p>}
-      {fileContent && (
-        <div className="my-4 pb-1 overflow-auto">
-          <h2 className="text-lg font-bold sticky left-0">File content:</h2>
-          <pre>{fileContent}</pre>
-          <h2 className="text-lg font-bold sticky left-0 mt-2">
-            Encrypted content:
-          </h2>
-          <pre>{encryptText(fileContent)}</pre>
-        </div>
-      )}
-    </form>
+    <div className="max-w-full border-2 border-gray-500 p-4 rounded-lg text-white">
+      <form>
+        <h1 className="text-2xl font-bold">Task 1</h1>
+        <label className="block mb-2 text-sm font-medium" htmlFor="file_input">
+          Upload file
+        </label>
+        <input
+          className="block border border-gray-300 rounded px-2 ps-0 background-white file:mr-4 file:py-2 file:px-4 file:border-0 file:font-semibold file:bg-gray-50 file:text-gray-700 hover:file:bg-gray-300"
+          id="file_input"
+          type="file"
+          accept="text/plain"
+          onChange={handleFileChange}
+          key={new Date().getTime()}
+        />
+        {error && <p className="text-red-500">{error}</p>}
+        {fileContent && (
+          <div className="my-4 pb-1 overflow-auto">
+            <h2 className="text-lg font-bold sticky left-0">File content:</h2>
+            <pre>{fileContent}</pre>
+            <h2 className="text-lg font-bold sticky left-0 mt-2">
+              Encrypted content:
+            </h2>
+            <pre>{encryptText(fileContent)}</pre>
+          </div>
+        )}
+      </form>
+    </div>
   );
 };
 
