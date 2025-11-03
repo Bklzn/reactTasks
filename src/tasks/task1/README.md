@@ -1,0 +1,1 @@
+Write a program in React that supports a form for uploading a text file, and then randomly rearranges the letters in each line except for the first and last letters of each word. Take into account punctuation, upper/lower case letters, multi-line texts, and Polish characters.
