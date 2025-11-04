@@ -8,8 +8,8 @@ import { useMemo, useState } from "react";
 const Task3: React.FC = () => {
   const [search, setSearch] = useState("");
   return (
-    <div className="h-full">
-      <div className="max-w-full border-2 border-gray-500 p-4 rounded-lg text-white">
+    <div className="max-w-full h-full">
+      <div className="border-2 border-gray-500 p-4 rounded-lg text-white">
         <div className="flex flex-row justify-between items-start">
           <h1 className="text-2xl font-bold pb-2">Task 3</h1>
           <input
