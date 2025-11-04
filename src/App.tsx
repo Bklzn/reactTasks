@@ -3,6 +3,8 @@ import "./App.css";
 import Task1 from "./tasks/task1/Task1";
 import Task2 from "./tasks/task2/Task2";
 import Sidebar from "./components/Sidebar/Sidebar";
+import Task3 from "./tasks/task3/Task3";
+import EditUser from "./tasks/task3/EditUser";
 
 function App() {
   const location = useLocation();
@@ -13,6 +15,8 @@ function App() {
         <Routes location={location}>
           <Route path="/task1" element={<Task1 />} />
           <Route path="/task2" element={<Task2 />} />
+          <Route path="/task3" element={<Task3 />} />
+          <Route path="/task3/:id/edit" element={<EditUser />} />
           <Route path="*" element={<Navigate to="/task1" />} />
         </Routes>
       </div>

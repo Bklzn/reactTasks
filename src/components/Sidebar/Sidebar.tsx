@@ -7,18 +7,30 @@ const Sidebar: React.FC = () => {
   const navigate = useNavigate();
   return (
     <aside className="w-[300px] bg-neutral-900">
-      <div className="w-full h-full p-5 py-10 flex flex-col gap-4">
+      <div className="w-full max-h-screen sticky top-0 p-5 py-10 flex flex-col gap-4">
         <Button
           onClick={() => navigate("/task1")}
-          className={location.pathname === "/task1" ? "!text-purple-400" : ""}
+          className={
+            location.pathname.includes("/task1") ? "!text-purple-400" : ""
+          }
         >
           Task 1
         </Button>
         <Button
           onClick={() => navigate("/task2")}
-          className={location.pathname === "/task2" ? "!text-purple-400" : ""}
+          className={
+            location.pathname.includes("/task2") ? "!text-purple-400" : ""
+          }
         >
           Task 2
+        </Button>
+        <Button
+          onClick={() => navigate("/task3")}
+          className={
+            location.pathname.includes("/task3") ? "!text-purple-400" : ""
+          }
+        >
+          Task 3
         </Button>
       </div>
     </aside>
