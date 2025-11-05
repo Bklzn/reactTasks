@@ -3,9 +3,16 @@ import type { User } from "./types";
 
 export const api = axios.create({
   baseURL: "https://gorest.co.in/public/v2/",
-  headers: {
-    Authorization: `Bearer ${import.meta.env.VITE_API_TOKEN}`,
-  },
+});
+
+api.interceptors.request.use((config) => {
+  const token = localStorage.getItem("gorestToken");
+  if (token) {
+    config.headers.Authorization = `Bearer ${token}`;
+  } else {
+    config.headers.Authorization = "";
+  }
+  return config;
 });
 
 export const getUsers = async () => {
